@@ -16,6 +16,12 @@
 	background-color: #FEFAC0;
 	margin-left: 20em;
 	margin-right: 5em;
+	float: right;
 	
 
+}
+
+.SongName {
+	font-size: 2em;
+	color: #785616;
 }
