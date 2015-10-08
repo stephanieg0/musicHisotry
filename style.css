@@ -1,3 +1,11 @@
 .topBox {
 	background-color: pink;
+	margin: 2em;
+
+}
+
+.leftBox {
+	background-color: blue;
+	margin-left: 10em;
+	margin-right: 5em;
 }
