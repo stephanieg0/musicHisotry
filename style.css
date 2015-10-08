@@ -1,12 +1,12 @@
 .topBox {
-	background-color: pink;
-	margin-right: 100em;
-	margin-left: 50em;
+	background-color: #FFB4B0;
+	margin-left: 10em;
+	margin-right: 5em;
 
 }
 
 .leftBox {
-	background-color: blue;
+	background-color: #4DD7FA;
 	margin-left: 10em;
-	margin-right: 5em;
+	margin-right: 100em;
 }
