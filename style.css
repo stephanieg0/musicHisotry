@@ -35,6 +35,10 @@
 	padding-bottom: 20px;
 }
 
-.musicGenre {
+.musicGenreL {
 	float: left;
+}
+
+.musicGenreR {
+	float: right;
 }
