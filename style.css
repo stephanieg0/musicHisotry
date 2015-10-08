@@ -9,4 +9,13 @@
 	background-color: #4DD7FA;
 	margin-left: 10em;
 	margin-right: 100em;
+	margin-bottom: 30em;
+	margin-top: 1em;
+}
+
+.rightBox {
+	background-color: #FEFAC0;
+	margin-left: 120em;
+	margin-right: 5em;
+	
 }
