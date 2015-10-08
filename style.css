@@ -27,5 +27,9 @@
 .SongName {
 	font-size: 2em;
 	color: #785616;
+
+}
+
+.namesLayout {
 	padding-bottom: 5em;
 }
