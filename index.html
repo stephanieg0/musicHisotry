@@ -15,53 +15,58 @@
 		</fieldset>
 
 		<!--Left Box-->
-		<fieldset class = "leftBox">
-			<label>Song lenght:</label>
-			<input type = "range">
-			<p><label>Artist</label></p>
+		<div class = "leftBox">
+			<fieldset>
+				<label>Song length:</label>
+				<input type = "range">
+			</fieldset>
+			<fieldset>
+				<p><label>Artist</label></p>
 
-			<select name = "artist">
-				<p><option value = "Avril Lavigne">Avril Lavigne</option></p>
-			</select>
-			<p><label>Album</label></p>
-			<select>
-				<p><option value = "Let Me Go">Let Me Go</option></p>
-			</select>
+				<select name = "artist">
+					<p><option value = "Avril Lavigne">Avril Lavigne</option></p>
+				</select>
+			</fieldset>
+			<fieldset>
+				<p><label>Album</label></p>
+				<select>
+					<p><option value = "Let Me Go">Let Me Go</option></p>
+				</select>
+			</fieldset>
 
-			<!--Genre Left Options-->	
-			<p><label>Genre:</label></p>
-			<div class = "musicGenreL">
-				<p><input type = "checkbox">Rock</p>
-				<p><input type = "checkbox">Pop</p>
-				<p><input type = "checkbox">Blues</p>
-			</div>
+			<!--Genre Left Options-->
+			<fieldset>	
+				<p><label>Genre:</label></p>
+				<div class = "musicGenreL">
+					<p><input type = "checkbox">Rock</p>
+					<p><input type = "checkbox">Pop</p>
+					<p><input type = "checkbox">Blues</p>
+				</div>
+		
 			<!--Genre Right Options-->
+
 			<div class = "musicGenreR">	
 				<p><input type = "checkbox">Classical</p>
 				<p><input type = "checkbox">Jazz</p>
 				<p><input type = "checkbox">HipHop</p>
 			</div>
+			</fieldset>
 			<!--Filter Button-->
-			<div>
-				<button class = "buttonPosition" name = "filterButton">Filter</button>
-		    </div>
-		</fieldset>
+			
+				<input type="submit" id="ButtonPosition" value="Filter">
+				<!--<button name = "filterButton">Filter</button>-->
+		    
+		</div>
 
 		<!--Right Box-->
-		<fieldset class = "rightBox" class = "namesLayout">
-			<label class = "SongName">Song Name</label>
-			<br>
-			<label>Artist name  |  Album name  |  Genre</label>
-			<br>
-			<label class = "SongName">Song Name</label>
-			<br>
-			<label>Artist name  |  Album name  |  Genre</label>
-			<br>
-			<label class = "SongName">Song Name</label>
-			<br>
-			<label>Artist name  |  Album name  |  Genre</label>
-			<br>
-			<label class = "SongName">Song Name</label>
+		<fieldset class = "rightBox">
+			<p class = "SongName">Song Name</p>
+			<p>Artist name  |  Album name  |  Genre</p>
+			<p class = "SongName">Song Name</p>
+			<p>Artist name  |  Album name  |  Genre</p>
+			<p class = "SongName">Song Name</p>
+			<p>Artist name  |  Album name  |  Genre</p>
+			<p class = "SongName">Song Name</p>
 		</fieldset>
 		
 	</body>

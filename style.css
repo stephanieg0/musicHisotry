@@ -2,15 +2,17 @@
 	background-color: #FFB4B0;
 	margin-left: 10em;
 	margin-right: 5em;
+	border: 2px solid black;
 
 }
 
 .leftBox {
 	background-color: #4DD7FA;
 	margin-left: 10em;
-	/*margin-right: 150em;*/
 	margin-top: 1em;
+	margin-right: 1em;
 	float: left;
+	border: 2px solid black;
 }
 
 .rightBox {
@@ -18,20 +20,18 @@
 	margin-top: 1em;
 	margin-left: 20em;
 	margin-right: 5em;
+	border: 2px solid black;
 	
 }
 
 
 .SongName {
-	font-size: 2em;
+	font-size: 1.5em;
 	color: #785616;
-
+	padding-bottom: 0.5em;
 
 }
 
-.namesLayout {
-	padding-bottom: 50px;
-}
 
 .musicGenreL {
 	float: left;
@@ -41,6 +41,13 @@
 	float: right;
 }
 
-.ButtonPosition {
-	float: right;
+#ButtonPosition {
+	width: 9em;
+	height: 7em;
+	margin-left: 5.5em;
+	margin-bottom: 1em;
+}
+
+fieldset {
+	border: 0;
 }
