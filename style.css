@@ -17,7 +17,7 @@
 	background-color: #FEFAC0;
 	margin-left: 20em;
 	margin-right: 5em;
-	margin-top: -1em;
+	
 
 	
 	
@@ -27,4 +27,5 @@
 .SongName {
 	font-size: 2em;
 	color: #785616;
+	padding: 5em;
 }
