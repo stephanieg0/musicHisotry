@@ -34,3 +34,7 @@
 .namesLayout {
 	padding-bottom: 20px;
 }
+
+.musicGenre {
+	float: left;
+}
