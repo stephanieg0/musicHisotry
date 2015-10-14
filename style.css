@@ -2,29 +2,39 @@ fieldset {
 	border: 0;
 }
 
+.flex-container {
+	display: flex;
+ 	-webkit-flex-direction: row;
+ 	-webkit-flex-wrap: wrap;
+ 	margin: 0 auto;
+ 	width: 80%;
+}
+
+.flex-item {
+	width: 100px;
+}
+
 .topBox {
 	background-color: #FFB4B0;
-	margin-left: 10em;
-	margin-right: 5em;
+	flex:1 100%;
 	border: 2px solid black;
+	position: fixed;
+	width: 76.5%;
 
 }
 
 .leftBox {
-	background-color: #4DD7FA;
-	margin-left: 10em;
-	margin-top: 1em;
-	margin-right: 1em;
-	float: left;
+	background-color: #4DD7FA;	
 	border: 2px solid black;
+	flex-grow: 1;
+	margin-top: 80px;
 }
 
 .rightBox {
 	background-color: #FEFAC0;
-	margin-top: 1em;
-	margin-left: 20em;
-	margin-right: 5em;
 	border: 2px solid black;
+	flex-grow: 5;
+	margin-top: 80px;
 	
 }
 
@@ -52,7 +62,23 @@ fieldset {
 	margin-bottom: 1em;
 }
 
-#listOfSongs {
-	font-family: helvetica;
-	padding-bottom: 7.6em;
+#listOfSongs :nth-child(2n+0){
+	font-family: helvetica;	
+	border: 1px solid black;
+	background-color: #FFF5EE;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	font-weight: bold;
+}
+
+#listOfSongs :nth-child(2n+1){
+	font-family: helvetica;	
+	border: 1px solid black;
+	background-color: #F5FFFA;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.text {
+	font-size: 3em;
 }

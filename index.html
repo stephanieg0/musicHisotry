@@ -6,78 +6,136 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-		<div id="container">
-		</div>
+		
+		<div class="flex-container">
 
-		<!--Top Box-->
-		<fieldset class = "topBox">
-			<label>View Music |</label>
-			<a href = "http://www.google.com">Add Music</a>
-			<label> | </label>
-			<a href = "http://www.google.com">Profile</a>
-		</fieldset>
+			<!--Top Box-->
+			<fieldset class = "topBox flex-item">
+				<label>View Music |</label>
+				<a href = "http://www.google.com">Add Music</a>
+				<label> | </label>
+				<a href = "http://www.google.com">Profile</a>
+			</fieldset>		
 
-		<!--Left Box-->
-		<div class = "leftBox">
-			<fieldset>
-				<label>Song length:</label>
-				<input type = "range">
-			</fieldset>
-			<fieldset>
-				<p><label>Artist</label></p>
+			<!--Left Box-->
+			<div class = "leftBox flex-item">
+				<fieldset>
+					<label>Song length:</label>
+					<input type = "range">
+				</fieldset>
+				<fieldset>
+					<p><label>Artist</label></p>
 
-				<select name = "artist">
-					<p><option value = "Avril Lavigne">Avril Lavigne</option></p>
-				</select>
-			</fieldset>
-			<fieldset>
-				<p><label>Album</label></p>
-				<select>
-					<p><option value = "Let Me Go">Let Me Go</option></p>
-				</select>
-			</fieldset>
+					<select name = "artist">
+						<p><option value = "Avril Lavigne">Avril Lavigne</option></p>
+					</select>
+				</fieldset>
+				<fieldset>
+					<p><label>Album</label></p>
+					<select>
+						<p><option value = "Let Me Go">Let Me Go</option></p>
+					</select>
+				</fieldset>
 
-			<!--Genre Left Options-->
-			<fieldset>	
-				<p><label>Genre:</label></p>
-				<div class = "musicGenreL">
-					<p><input type = "checkbox">Rock</p>
-					<p><input type = "checkbox">Pop</p>
-					<p><input type = "checkbox">Blues</p>
+				<!--Genre Left Options-->
+				<fieldset>	
+					<p><label>Genre:</label></p>
+					<div class = "musicGenreL">
+						<p><input type = "checkbox">Rock</p>
+						<p><input type = "checkbox">Pop</p>
+						<p><input type = "checkbox">Blues</p>
+					</div>
+			
+				<!--Genre Right Options-->
+
+				<div class = "musicGenreR">	
+					<p><input type = "checkbox">Classical</p>
+					<p><input type = "checkbox">Jazz</p>
+					<p><input type = "checkbox">HipHop</p> 	
 				</div>
-		
-			<!--Genre Right Options-->
-
-			<div class = "musicGenreR">	
-				<p><input type = "checkbox">Classical</p>
-				<p><input type = "checkbox">Jazz</p>
-				<p><input type = "checkbox">HipHop</p> 	
+				</fieldset>
+				<!--Filter Button-->
+				
+				<input type="submit" id="ButtonPosition" value="Filter">					    
 			</div>
+
+
+			<!--Right Box-->
+			<fieldset class = "rightBox flex-item">
+				
+				<p class = "SongName">Songs</p>
+
+				<div id="listOfSongs">
+					<p>Song name  |  Artist name </p>
+				</div>
+
 			</fieldset>
-			<!--Filter Button-->
-			
-				<input type="submit" id="ButtonPosition" value="Filter">
-				    
-		</div>
-
-		<!--Right Box-->
-		<fieldset class = "rightBox">
-			
-			<p class = "SongName">Songs</p>
-
-			<div id="listOfSongs">
-				<p>Song name  |  Artist name </p>
+			<div class="text">
+				He was a boy
+				She was a girl
+				Can I make it any more obvious
+				He was a punk
+				She did ballet
+				What more can I say
+				He wanted her
+				She'd never tell secretly she wanted him as well
+				But all of her friends
+				Stuck up their nose
+				They had a problem with his baggy clothes
+				He was a skater boy
+				She said see you later boy
+				He wasn't good enough for her
+				She had a pretty face
+				But her head was up in space
+				She needed to come back down to earth
+				Five years from now
+				She sits at home
+				Feeding the baby she's all alone
+				She turns on t.v
+				Guess who she sees
+				Skater boy rockin' up MTV
+				She calls up her friends
+				They already know
+				And they've all got
+				Tickets to see his show
+				She tags along
+				Stands in the crowd
+				Looks up at the man that she turned down.
 			</div>
-<!--Classes taken out
-			<p class = "SongName">Song Name</p>
-			<p>Artist name  |  Album name  |  Genre</p>
-			<p class = "SongName">Song Name</p>
-			<p>Artist name  |  Album name  |  Genre</p>
-			<p class = "SongName">Song Name</p>
--->
-		</fieldset>
+			<div class="text">
+				He was a boy
+				She was a girl
+				Can I make it any more obvious
+				He was a punk
+				She did ballet
+				What more can I say
+				He wanted her
+				She'd never tell secretly she wanted him as well
+				But all of her friends
+				Stuck up their nose
+				They had a problem with his baggy clothes
+				He was a skater boy
+				She said see you later boy
+				He wasn't good enough for her
+				She had a pretty face
+				But her head was up in space
+				She needed to come back down to earth
+				Five years from now
+				She sits at home
+				Feeding the baby she's all alone
+				She turns on t.v
+				Guess who she sees
+				Skater boy rockin' up MTV
+				She calls up her friends
+				They already know
+				And they've all got
+				Tickets to see his show
+				She tags along
+				Stands in the crowd
+				Looks up at the man that she turned down.
+			</div>
 
-		
+		</div>	
 		<script src="version2.js"></script>
 
 	</body>
