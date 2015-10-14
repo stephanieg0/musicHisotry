@@ -19,22 +19,24 @@ fieldset {
 	flex:1 100%;
 	border: 2px solid black;
 	position: fixed;
-	width: 76.5%;
-
+	width: 78.5%;
+	padding: 15px 0;
+		
 }
+
 
 .leftBox {
 	background-color: #4DD7FA;	
 	border: 2px solid black;
 	flex-grow: 1;
-	margin-top: 80px;
+	margin-top: 70px;
 }
 
 .rightBox {
 	background-color: #FEFAC0;
 	border: 2px solid black;
 	flex-grow: 5;
-	margin-top: 80px;
+	margin-top: 70px;
 	
 }
 
