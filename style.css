@@ -52,3 +52,7 @@ fieldset {
 	margin-bottom: 1em;
 }
 
+#listOfSongs {
+	font-family: helvetica;
+	padding-bottom: 7.6em;
+}

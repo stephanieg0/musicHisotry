@@ -6,6 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
+		<div id="container">
+		</div>
+
 		<!--Top Box-->
 		<fieldset class = "topBox">
 			<label>View Music |</label>
@@ -48,7 +51,7 @@
 			<div class = "musicGenreR">	
 				<p><input type = "checkbox">Classical</p>
 				<p><input type = "checkbox">Jazz</p>
-				<p><input type = "checkbox">HipHop</p>
+				<p><input type = "checkbox">HipHop</p> 	
 			</div>
 			</fieldset>
 			<!--Filter Button-->
@@ -59,15 +62,24 @@
 
 		<!--Right Box-->
 		<fieldset class = "rightBox">
+			
+			<p class = "SongName">Songs</p>
+
+			<div id="listOfSongs">
+				<p>Song name  |  Artist name </p>
+			</div>
+<!--Classes taken out
 			<p class = "SongName">Song Name</p>
 			<p>Artist name  |  Album name  |  Genre</p>
 			<p class = "SongName">Song Name</p>
 			<p>Artist name  |  Album name  |  Genre</p>
 			<p class = "SongName">Song Name</p>
-			<p>Artist name  |  Album name  |  Genre</p>
-			<p class = "SongName">Song Name</p>
+-->
 		</fieldset>
+
 		
+		<script src="version2.js"></script>
+
 	</body>
 
 </html>
