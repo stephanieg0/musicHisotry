@@ -9,7 +9,7 @@ Must add each string to the DOM in index.html in the main content area.
 
 
  var songs = [];
- var songElement = document.getElementById ("listOfSongs", "listOfSongs2", "listOfSongs3");
+ var songElement = document.getElementById ("listOfSongs");
 
 
 songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
