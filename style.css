@@ -70,7 +70,6 @@ fieldset {
 	background-color: #FFF5EE;
 	padding-bottom: 5px;
 	padding-top: 5px;
-	font-weight: bold;
 }
 
 #listOfSongs :nth-child(2n+1){
@@ -79,6 +78,10 @@ fieldset {
 	background-color: #F5FFFA;
 	padding-bottom: 5px;
 	padding-top: 5px;
+}
+
+#listOfSongs :first-of-type{
+	font-weight: bold;
 }
 
 .text {
