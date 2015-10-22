@@ -1,51 +1,73 @@
 fieldset {
 	border: 0;
 }
-
-.flex-container {
-	display: flex;
- 	-webkit-flex-direction: row;
- 	-webkit-flex-wrap: wrap;
- 	margin: 0 auto;
- 	width: 80%;
-}
-
-.flex-item {
-	width: 100px;
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #3B5998;
 }
 
 .topBox {
-	background-color: #FFB4B0;
-	flex:1 100%;
-	border: 2px solid black;
+	background-color: #293E6A;
+	color: white;
+	margin-left: 10em;
+	padding-top: 1em;
+	width: 65%;
+	height: 40px;
+	border-radius: 1px;
 	position: fixed;
-	width: 78.5%;
-	padding: 15px 0;
-		
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	text-align: center;
+
 }
 
+.topBoxHidden {
+	visibility: hidden;
+	background-color:  #293E6A;
+	margin-left: 10em;
+	padding-top: 1em;
+	width: 62.5%;
+	height: 40px;
+	border-radius: 1px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	text-align: center;
+}
+.nav-text {
+	color: white;
+	text-decoration: none;
+}
+.nav-text:hover {
+	color: #639BF1;
+	text-decoration: none;
+	cursor: hand;
+	opacity: 0.6;
+}
 
 .leftBox {
-	background-color: #4DD7FA;	
-	border: 2px solid black;
-	flex-grow: 1;
-	margin-top: 70px;
+	background-color: #293E6A;
+	color: #639BF1;
+	margin-left: 10em;
+	margin-top: 1em;
+	margin-right: 1em;
+	float: left;
+	border-radius: 1px;
 }
 
 .rightBox {
-	background-color: #FEFAC0;
-	border: 2px solid black;
-	flex-grow: 5;
-	margin-top: 70px;
-	
+	background-color: #293E6A;
+	color: #639BF1;
+	margin-top: 1em;
+	margin-left: 20em;
+	margin-right: 11.5em;
+	border-radius: 1px;	
 }
 
-
 .SongName {
-	font-size: 1.5em;
-	color: #785616;
+	font-weight: 700;
+	font-size: 1.2em;
+	color: #639BF1;
 	padding-bottom: 0.5em;
-
 }
 
 
@@ -64,26 +86,23 @@ fieldset {
 	margin-bottom: 1em;
 }
 
-#listOfSongs :nth-child(2n+0){
-	font-family: helvetica;	
-	border: 1px solid black;
-	background-color: #FFF5EE;
-	padding-bottom: 5px;
-	padding-top: 5px;
+#listOfSongs {
+	min-height: 357px;
 }
 
-#listOfSongs :nth-child(2n+1){
-	font-family: helvetica;	
-	border: 1px solid black;
-	background-color: #F5FFFA;
-	padding-bottom: 5px;
-	padding-top: 5px;
+.input-box-hidden {
+	display: none;
 }
 
-#listOfSongs :first-of-type{
-	font-weight: bold;
+#input-box-display {
+	margin-left: 11em;
+	margin-top: 1em;
+	color: #639BF1;
 }
 
 .text {
-	font-size: 3em;
+	margin: 0 10em;
+	text-align: center;
+	font-size: 30px;
 }
+

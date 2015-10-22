@@ -4,28 +4,51 @@
 		<meta charset="utf-8">
 		<title>Music History First Assignment</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300' rel='stylesheet' type='text/css'>
 	</head>
-	<body>
-		
-		<div class="flex-container">
 
+	<body>		
+		<div>
 			<!--Top Box-->
-			<nav class = "topBox flex-item">
-				<label>View Music |</label>
-				<a href = "http://www.google.com">Add Music</a>
+			<nav class = "topBox">
+				<a href="#" id="viewLink" class="nav-text">View Music</a>
+				<label>|</label>
+				<a href="#" id="addLink" class="nav-text">Add Music</a>
 				<label> | </label>
-				<a href = "http://www.google.com">Profile</a>
-			</nav>		
+				<a id="profileLink" class="nav-text">Profile</a>
+			</nav>	
+			<!--HIDDEN NAV FOR POSITION-->
+			<nav class = "topBoxHidden">
+				<a class="nav-text">View Music</a>
+				<label>|</label>
+				<a class="nav-text">Add Music</a>
+				<label> | </label>
+				<a class="nav-text">Profile</a>
+			</nav>	
+
+			<!--Input Boxes-->
+			<div class="input-box-hidden" id="input-box-display" >
+				<div>
+					<input type="text" id="input-artist-name"> Artist Name
+				</div>
+				<div>
+					<input type="text" id="input-song-name"> Song Name
+				</div>
+				<div>
+					<input type="text" id="input-album-name"> Album Name
+				</div>
+				<button id="add-button">Add to List</button>
+			</div>
+	
 
 			<!--Left Box-->
-			<div class = "leftBox flex-item">
+			<div class = "leftBox">
 				<fieldset>
 					<label>Song length:</label>
 					<input type = "range">
 				</fieldset>
 				<fieldset>
 					<p><label>Artist</label></p>
-
 					<select name = "artist">
 						<p><option value = "Avril Lavigne">Avril Lavigne</option></p>
 					</select>
@@ -36,7 +59,6 @@
 						<p><option value = "Let Me Go">Let Me Go</option></p>
 					</select>
 				</fieldset>
-
 				<!--Genre Left Options-->
 				<fieldset>	
 					<p><label>Genre:</label></p>
@@ -61,16 +83,17 @@
 
 
 			<!--Right Box-->
-			<fieldset class = "rightBox flex-item">
+			<fieldset class = "rightBox">
 				
-				<p class = "SongName">Songs</p>
+				<p class = "SongName">Your Songs</p>
 
 				<div id="listOfSongs">
+					<!--Inner HTML-->
 				
 				</div>
 
 			</fieldset>
-			<div class="text">
+	<!-- 		<div class="text">
 				He was a boy
 				She was a girl
 				Can I make it any more obvious
@@ -133,10 +156,10 @@
 				She tags along
 				Stands in the crowd
 				Looks up at the man that she turned down.
-			</div>
+			</div> -->
 
 		</div>	
-		<script src="version2.js"></script>
+		<script src="version4.js"></script>
 
 	</body>
 
