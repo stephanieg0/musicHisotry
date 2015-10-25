@@ -44,11 +44,15 @@ body {
 	opacity: 0.6;
 }
 
+.right-left-box-hidden {
+	display: none;
+}
+
 .leftBox {
 	background-color: #293E6A;
 	color: #639BF1;
-	margin-left: 10em;
 	margin-top: 1em;
+	margin-left: 10em;
 	margin-right: 1em;
 	float: left;
 	border-radius: 1px;
@@ -68,6 +72,7 @@ body {
 	font-size: 1.2em;
 	color: #639BF1;
 	padding-bottom: 0.5em;
+	margin: 0px;
 }
 
 
@@ -79,6 +84,7 @@ body {
 	float: right;
 }
 
+/*filter button*/
 #ButtonPosition {
 	width: 9em;
 	height: 7em;
@@ -87,7 +93,7 @@ body {
 }
 
 #listOfSongs {
-	min-height: 357px;
+	min-height: 286px;
 }
 
 .input-box-hidden {
@@ -104,5 +110,15 @@ body {
 	margin: 0 10em;
 	text-align: center;
 	font-size: 30px;
+}
+
+#delete-all-button {
+	margin-top: 55px;
+	background-color: gray;
+	color: red;
+}
+
+#more-button {
+	margin-left: 300px;
 }
 
