@@ -1,0 +1,120 @@
+fieldset {
+	border: 0;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #880E4F;
+}
+
+.topBox {
+	background-color: #E91E63;
+	color: white;
+	padding-top: 6px;
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2em;
+	font-weight: 700;
+	text-align: center;
+
+}
+
+.topBoxHidden {
+	visibility: hidden;
+	background-color:  #E91E63;
+	padding-top: 6px;
+	width: 100%;
+	height: 60px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2em;
+	font-weight: 700;
+	text-align: center;
+}
+.nav-text {
+	color: white;
+	text-decoration: none;
+}
+.nav-text:hover {
+	color: #639BF1;
+	text-decoration: none;
+	cursor: hand;
+	opacity: 0.6;
+}
+
+.right-left-box-hidden {
+	display: none;
+}
+
+.row {
+	margin-top: 1em;
+}
+.leftBox {
+	background-color: #C51162;
+	color: #639BF1;
+}
+
+.rightBox {
+	background-color: #C51162;
+	color: #639BF1;	
+}
+
+.SongName {
+	font-weight: 700;
+	font-size: 1.2em;
+	color: #639BF1;
+	margin: 0px;
+}
+
+
+.musicGenreL {
+	float: left;
+}
+
+.musicGenreR {
+	float: right;
+}
+
+/*filter button*/
+#ButtonPosition {
+	width: 9em;
+	height: 4em;
+	margin-left: 5.5em;
+	margin-bottom: 8px;
+}
+
+#listOfSongs {
+	min-height: 286px;
+}
+
+.input-box-hidden {
+	display: none;
+}
+
+#input-box-display {
+	margin-left: 11em;
+	margin-top: 1em;
+	color: #639BF1;
+}
+
+.text {
+	margin: 0 10em;
+	text-align: center;
+	font-size: 30px;
+}
+
+/*each delete song button from javascript*/
+.delete-button {
+	font-size: 0.7em;
+	background-color: 
+}
+
+#delete-all-button {
+	background-color: gray;
+	color: red;
+}
+
+#more-button {
+	float: right;
+}
+

@@ -1,103 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Music History First Assignment</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300' rel='stylesheet' type='text/css'>
+		<!--bootstrap has two links, one js link and one css link-->
+		<link rel="stylesheet" type="text/css" href="./lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+
 	</head>
 
 	<body>		
-		<div>
+		
 			<!--Top Box-->
-			<nav class = "topBox">
-				<a href="#" id="viewLink" class="nav-text">View Music</a>
-				<label>|</label>
-				<a href="#" id="addLink" class="nav-text">Add Music</a>
-				<label> | </label>
-				<a id="profileLink" class="nav-text">Profile</a>
-			</nav>	
-			<!--HIDDEN NAV FOR POSITION-->
-			<nav class = "topBoxHidden">
-				<a class="nav-text">View Music</a>
-				<label>|</label>
-				<a class="nav-text">Add Music</a>
-				<label> | </label>
-				<a class="nav-text">Profile</a>
-			</nav>	
-
-			<!--Input Boxes-->
-			<div class="input-box-hidden" id="input-box-display" >
-				<div>
-					<input type="text" id="input-artist-name"> Artist Name
-				</div>
-				<div>
-					<input type="text" id="input-song-name"> Song Name
-				</div>
-				<div>
-					<input type="text" id="input-album-name"> Album Name
-				</div>
-				<button id="add-button">Add to List</button>
-			</div>
+				<nav class = "topBox">
+					<a href="#" id="viewLink" class="nav-text">View Music</a>
+					<label>|</label>
+					<a href="#" id="addLink" class="nav-text">Add Music</a>
+					<label> | </label>
+					<a id="profileLink" class="nav-text">Profile</a>
+				</nav>
 	
+			<!--HIDDEN NAV FOR POSITION-->
+					<nav class = "topBoxHidden">
+						<a class="nav-text">View Music</a>
+						<label>|</label>
+						<a class="nav-text">Add Music</a>
+						<label> | </label>
+						<a class="nav-text">Profile</a>
+					</nav>
+	
+		<div class="container-fluid">
+			<!--second row that contains both boxes-->
+			<div class="row">
 
-			<!--Left Box-->
-			<div class = "leftBox">
-				<fieldset>
-					<label>Song length:</label>
-					<input type = "range">
-				</fieldset>
-				<fieldset>
-					<p><label>Artist</label></p>
-					<select name = "artist">
-						<p><option value = "Avril Lavigne">Avril Lavigne</option></p>
-					</select>
-				</fieldset>
-				<fieldset>
-					<p><label>Album</label></p>
-					<select>
-						<p><option value = "Let Me Go">Let Me Go</option></p>
-					</select>
-				</fieldset>
-				<!--Genre Left Options-->
-				<fieldset>	
-					<p><label>Genre:</label></p>
-					<div class = "musicGenreL">
-						<p><input type = "checkbox">Rock</p>
-						<p><input type = "checkbox">Pop</p>
-						<p><input type = "checkbox">Blues</p>
-					</div>
-			
-				<!--Genre Right Options-->
-
-				<div class = "musicGenreR">	
-					<p><input type = "checkbox">Classical</p>
-					<p><input type = "checkbox">Jazz</p>
-					<p><input type = "checkbox">HipHop</p> 	
+				<div class="col-md-12">
+					<!--Left Box-->
+					<!--Input Boxes-->
+					<form class="input-box-hidden" id="input-box-display">
+						<div class="form-group">
+							<input type="text" id="input-artist-name" class="form-control" placeholder="Artist Name"> 
+						</div>
+						<div class="form-group">
+							<input type="text" id="input-song-name" class="form-control" placeholder="Song Name">
+						</div>
+						<div class="form-group">
+							<input type="text" id="input-album-name" class="form-control" placeholder="Album Name">
+						</div>
+						<button class="btn btn-default" id="add-button">Add to List</button>
+					</form>
 				</div>
-				</fieldset>
-				<!--Filter Button-->
+
+				<div class="col-md-1"></div>
+
+					<!--Left Box-->
+				<div class="leftBox col-md-3">
+					<fieldset>
+						<label>Song length:</label>
+						<input type = "range">
+					</fieldset>
+					<fieldset>
+						<p><label>Artist</label></p>
+						<select class="form-control">
+							<p><option value ="Avril Lavigne">Avril Lavigne</option></p>
+						</select>
+					</fieldset>
+					<fieldset>
+						<p><label>Album</label></p>
+						<select class="form-control">
+							<p><option value ="Let Me Go">Let Me Go</option></p>
+						</select>
+					</fieldset>
+					<!--Genre Left Options-->
+					<fieldset>	
+						<p><label>Genre:</label></p>
+						<div class = "musicGenreL">
+							<p><input type = "radio"> Rock</p>
+							<p><input type = "radio"> Pop</p>
+							<p><input type = "radio"> Blues</p>
+						</div>
 				
-				<input type="submit" id="ButtonPosition" value="Filter">					    
+					<!--Genre Right Options-->
+
+					<div class = "musicGenreR">	
+						<p><input type = "radio"> Classical</p>
+						<p><input type = "radio"> Jazz</p>
+						<p><input type = "radio"> HipHop</p> 	
+					</div>
+					</fieldset>
+					<!--Filter Button-->
+					<div id="filter-button">
+					<input type="submit" class="btn btn-default" value="Filter">	
+					</div>				    
+				
+				</div>
+
+				<!--Right Box-->
+				<div class="rightBox col-md-6 col-md-offset-1">
+					<button id="more-button" class="btn btn-default">More...</button>
+					<p class ="your-songs">Your Songs</p>
+					<div id="listOfSongs"></div>
+					<div id="morelistOfSongs"></div>
+					<button id="delete-all-button" class="btn btn-default">Delete All</button>				
+				</div>
+				<div class="col-md-1"></div>
 			</div>
-
-
-			<!--Right Box-->
-			<fieldset class = "rightBox">
-				<button id="more-button">More</button>
-				<p class = "SongName">Your Songs</p>
-				<div id="listOfSongs"></div>
-				<div id="morelistOfSongs"></div>
-				<button id="delete-all-button">Delete All</button>
-			</fieldset>
-
-		</div>	
-		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-		<script src="version5.js"></script>
-		<script src="ajax.js"></script>
+		</div>
+		<!--data-main has to be the musicHistory file, which is the file that loads first-->	
+		<script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script>
 		
-		
-
 	</body>
 
 </html>

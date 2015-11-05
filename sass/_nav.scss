@@ -1,0 +1,41 @@
+//top Nav bar
+.topBox {
+	background-color: #880E4F;
+	color: #F44336;
+	padding-top: 6px;
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2em;
+	font-weight: 700;
+	text-align: center;
+	border: 5px solid #F44336;
+	border-radius: 5px;
+
+}
+//top hidden Nav bar for fixed position
+.topBoxHidden {
+	visibility: hidden;
+	background-color:  #AD1457;
+	padding-top: 6px;
+	width: 100%;
+	height: 60px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2em;
+	font-weight: 700;
+	text-align: center;
+}
+//Nav bar Text only
+a.nav-text {
+	color: #F44336;
+	text-decoration: none;
+}
+
+.nav-text:hover {
+	color: #E53935;
+	text-decoration: none;
+	cursor: hand;
+	opacity: 0.6;
+}
+

@@ -1,0 +1,105 @@
+.topBox {
+  background-color: #880E4F;
+  color: #F44336;
+  padding-top: 6px;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  border: 5px solid #F44336;
+  border-radius: 5px; }
+
+.topBoxHidden {
+  visibility: hidden;
+  background-color: #AD1457;
+  padding-top: 6px;
+  width: 100%;
+  height: 60px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center; }
+
+a.nav-text {
+  color: #F44336;
+  text-decoration: none; }
+
+.nav-text:hover {
+  color: #E53935;
+  text-decoration: none;
+  cursor: hand;
+  opacity: 0.6; }
+
+/*filter button*/
+#filter-button {
+  text-align: center; }
+
+/*each delete song button from javascript*/
+.delete-button {
+  font-size: 0.7em; }
+
+#delete-all-button {
+  color: red; }
+
+#more-button {
+  float: right; }
+
+select.form-control {
+  height: 20px;
+  font-size: 1em; }
+
+fieldset {
+  border: 0; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #AD1457; }
+
+.right-left-box-hidden {
+  display: none; }
+
+.leftBox {
+  background-color: #880E4F;
+  margin-top: 10%;
+  color: #F44336;
+  border: 5px solid #F44336;
+  border-radius: 5px; }
+
+.rightBox {
+  background-color: #880E4F;
+  margin-top: 10%;
+  color: #F44336;
+  border: 5px solid #F44336;
+  border-radius: 5px; }
+
+.your-songs {
+  font-weight: 700;
+  font-size: 1.5em;
+  margin: 0px; }
+
+.musicGenreL {
+  float: left; }
+
+.musicGenreR {
+  float: right; }
+
+#listOfSongs {
+  min-height: 286px; }
+
+.input-box-hidden {
+  display: none; }
+
+#input-box-display {
+  text-align: center;
+  margin-top: 1em;
+  color: #03A9F4; }
+
+.form-control {
+  width: 80%;
+  margin: 0% 10%;
+  text-align: center; }
+
+/*# sourceMappingURL=main.css.map */
