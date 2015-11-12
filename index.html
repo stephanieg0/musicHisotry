@@ -43,10 +43,10 @@
 					<!--Input Boxes-->
 					<form class="input-box-hidden" id="input-box-display">
 						<div class="form-group">
-							<input type="text" id="input-artist-name" class="form-control" placeholder="Artist Name"> 
+							<input type="text" id="input-song-name" class="form-control" placeholder="Song Name"> 
 						</div>
 						<div class="form-group">
-							<input type="text" id="input-song-name" class="form-control" placeholder="Song Name">
+							<input type="text" id="input-artist-name" class="form-control" placeholder="Artist Name">
 						</div>
 						<div class="form-group">
 							<input type="text" id="input-album-name" class="form-control" placeholder="Album Name">
@@ -65,14 +65,14 @@
 					</fieldset>
 					<fieldset>
 						<p><label>Artist</label></p>
-						<select class="form-control">
-							<p><option value ="Avril Lavigne">Avril Lavigne</option></p>
+						<select class="form-control" id="artist-dropdown">
+							
 						</select>
 					</fieldset>
 					<fieldset>
 						<p><label>Album</label></p>
-						<select class="form-control">
-							<p><option value ="Let Me Go">Let Me Go</option></p>
+						<select class="form-control" id="album-dropdown">
+							
 						</select>
 					</fieldset>
 					<!--Genre Left Options-->
@@ -94,17 +94,22 @@
 					</fieldset>
 					<!--Filter Button-->
 					<div id="filter-button">
-					<input type="submit" class="btn btn-default" value="Filter">	
-					</div>				    
+					<input type="submit" class="btn btn-default" value="Filter" id="filter-button">	
+					</div>	
+					<div id="unfilter-button">
+					<input type="submit" class="btn btn-default" value="Unfilter" id="unfilter-button">	
+					</div>			    
 				
 				</div>
 
 				<!--Right Box-->
 				<div class="rightBox col-md-6 col-md-offset-1">
-					<button id="more-button" class="btn btn-default">More...</button>
+					
 					<p class ="your-songs">Your Songs</p>
+
+				<!--******* Songs OutPut **********-->	
 					<div id="listOfSongs"></div>
-					<div id="morelistOfSongs"></div>
+					
 					<button id="delete-all-button" class="btn btn-default">Delete All</button>				
 				</div>
 				<div class="col-md-1"></div>

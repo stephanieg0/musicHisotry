@@ -1,15 +1,24 @@
 {
-	"songs": [
-		{
-			"title": "Skater Boy",
-			"artist": "Avril Lavigne",
-			"album": "Let Go"
-
-		},
-		{
-			"title": "A Dios le pido",
-			"artist": "Juanes",
-			"album": "Mi Sangre"
-		}
-	]
+  "songs": {
+    "skaterboy": {
+      "title": "Skater Boy", 
+      "artist": "Avril Lavigne",
+      "album": "Let Go"
+    },
+    "adioslepido": {
+      "title": "A Dios le pido", 
+      "artist": "Juanes",
+      "album": "Mi Sangre"
+    },
+    "babyonemoretime": {
+      "title": "Baby one more time", 
+      "artist": "Britney Spears",
+      "album": "Baby one more time"
+    },
+    "jimmyeatworld": {
+      "title": "The Middle", 
+      "artist": "Bleed American",
+      "album": "Jimmy Eat World"
+    }
+  }
 }
