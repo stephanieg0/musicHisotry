@@ -1,9 +1,6 @@
 define(["jquery", "populate-songs", "to-dom"],function($, populate, toDom){
 
-	var Firebase = function(){
-
-	}
-
+	
 	var songElement = $("#listOfSongs");
 
 	//ids for my delete from dom button.
@@ -37,7 +34,7 @@ define(["jquery", "populate-songs", "to-dom"],function($, populate, toDom){
 			url: "https://blinding-torch-9569.firebaseio.com/songs/" + songKey + "/.json",
 			method: "DELETE"
 		}).done(function(){
-			populate.songData(toDom.toDomData);
+			
 			console.log("song deleted");
 		})
 

@@ -4,10 +4,13 @@ requirejs.config({
     "jquery": "../lib/bower_components/jquery/dist/jquery.min",
     "hbs": "../lib/bower_components/require-handlebars-plugin/hbs",
     "bootstrap": "../lib/bower_components/bootstrap/dist/js/bootstrap.min",
-    "lodash": "../lib/bower_components/lodash/lodash.min"
+    "lodash": "../lib/bower_components/lodash/lodash.min",
+    "firebase": "../lib/bower_components/firebase/firebase",
+    "q": "../lib/bower_components/q/q"
   },
   shim : {
-        "bootstrap" : { "deps" :['jquery'] }
+        "bootstrap" : { "deps" :['jquery'] },
+        "firebase": { exports: "Firebase" }
     }
 });
 
@@ -23,7 +26,7 @@ require(
     //call the fuction inside first argument.
 
     
-    populate.songData(toDom.toDomData);
+    //populate.songData(toDom.toDomData);
     //each module is an island for one job only.
     //loopFuction is in its own file to place the songs in the dom.
     

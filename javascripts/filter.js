@@ -1,14 +1,17 @@
 //the filter button
 define(["jquery", "populate-songs", "to-dom"], function($, populate, toDom){
-
+	//need to request songData to use it
+	
 	var currentArtist;
 	var currentAlbum;
+	var songObject;
 	//My new object that will be given to toDomData function.
 	var filteredSongObject = {
 		songs: {
 
 		}
 	};
+
 
 	//new function that will have the matching key to pass to songData.
 	function filterSongs(songObject) {
@@ -32,24 +35,40 @@ define(["jquery", "populate-songs", "to-dom"], function($, populate, toDom){
 	//filter button
 	$("#filter-button").click(function (e){
 		event.preventDefault();
+		console.log("button works");
 		
 		//getting the value from the dropdown artist option.
 		currentArtist = $("#artist-dropdown").val();
 		console.log("currentArtist", currentArtist);
 		currentAlbum = $("#album-dropdown").val();
 		console.log("currentAlbum", currentAlbum);
+		filterSongs(songObject);
+		
 		//calling the songData function and passing a new function with the matching new object.
-		populate.songData(filterSongs);
+		
+		// populate.songData(filterSongs)
 		
 	});
+
+
 
 	//Unfilter button
 	$("#unfilter-button").click(function(){
 		//empty the object
 		filteredSongObject.songs = {};
 		//call the original function.
-      	populate.songData(toDom.toDomData);
+		toDom.toDomData(songObject);
+      	
       	console.log("unfilteredSongObject", filteredSongObject);
     });
+
+	return {
+		forMyFilter: function (songData) {
+		songObject = songData;
+		console.log("for checking link to populate songs");
+		
+		}
+
+	};
 
 });
