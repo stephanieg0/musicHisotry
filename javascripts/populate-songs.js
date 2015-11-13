@@ -12,23 +12,6 @@ define(function (require){
 
 		}
 	};
-
-	
-
-	// eventHandlers.init();
-
-	//returning songData to entry.js
-	// return {
-	// 	//my callback function is my toDom function that is being called in entry.js
-	// 	songData: function(callBackFunction){
-	// 		//Use the ajax method to import the json file inside the function that
-	// 		//will be called in the entry.js file.//
-	// 		//Function's parameter is the function that will populate the dom.
-	// 		$.ajax({
-	// 			url: "https://blinding-torch-9569.firebaseio.com/.json",
-	// 		}).done(callBackFunction);
-	// 	}
-	// }
 	
 	//make a reference to call the songs object from firebase
 	var fireRef = new Firebase("https://blinding-torch-9569.firebaseio.com");
@@ -37,9 +20,11 @@ define(function (require){
 	fireRef.child("songs").on("value", function (snapshot){
 		console.log("snapshot", snapshot);
 
+		//assigned the value of the firebase snapshot into my object
 		songData.songs = snapshot.val();
 		console.log("songsData", songData);
 
+		//passed object into dom function and to filter
 		toDom.toDomData(songData);
 		filter.forMyFilter(songData);
 		console.log("toDomData", toDom.toDomData);
