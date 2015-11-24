@@ -1,16 +1,14 @@
-define(["jquery", "populate-songs", "to-dom"], function($, populate, toDom) {
+define(["jquery", "populate-songs", "to-dom", "q"], function($, populate, toDom, Q) {
+	//make a variable for the deferred promise.
+	var deferred = Q.defer();
 
-	var addButton = $("#add-button");
-	var leftBoxHidden = $(".leftBox");
-	var rightBoxHidden = $(".rightBox");
+	//function to call for posting a song
+	return {
 
-	//Adding Songs with Add button
-	$(addButton).click(function(event){
-		console.log("button works");
-
-		event.preventDefault();
-
-		var newSongElement = {
+		postSong: function() {
+		console.log("addSong function is linking");
+			//object to store specific values in the input text.
+			var newSongElement = {
 			songs: {
 				title: $("#input-song-name").val(),
 				artist: $("#input-artist-name").val(),
@@ -18,28 +16,33 @@ define(["jquery", "populate-songs", "to-dom"], function($, populate, toDom) {
 				}
 				
 			};
-		console.log("newSongElement", newSongElement);
+		console.log("newSongElement in postSong Function", newSongElement);
+			
 		
 		$.ajax({
 			url: "https://blinding-torch-9569.firebaseio.com/songs.json",
 			method: "POST",
 			data: JSON.stringify(newSongElement.songs)
 			}).done(function(){
-				//need the dependencies to re populate the dom as the entry.js
-				populate.songData(toDom.toDomData);
-				console.log("newSongElement", newSongElement.songs);
+				
+				//when done resolve the newSongElement value.
+				deferred.resolve(newSongElement);
+				
+			//if fail reject the promise.
+			}).fail(function(xhr, status, error) {
+      		deferred.reject(error);
+    	});
+			//return the promise wheather is resolved or rejected.
+			return deferred.promise;
+		}
+	}
 
-			});
+	
+		
 		
 
-		//reseting the input boxes to empty
-		$("#input-song-name").val("");
-		$("#input-artist-name").val("");
-		$("#input-album-name").val("");
-		//changing the display/hidden classes
-		$("#input-box-display").attr("class", "input-box-hidden");
-		$(leftBoxHidden).removeClass("right-left-box-hidden");
-		$(rightBoxHidden).removeClass("right-left-box-hidden");
-	});
+	
+		
+		
+	
 });
-

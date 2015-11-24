@@ -15,17 +15,17 @@ define(["jquery", "populate-songs", "to-dom"], function($, populate, toDom){
 
 	//new function that will have the matching key to pass to songData.
 	function filterSongs(songObject) {
-		console.log("songObject in filterSongs", songObject);
+		// console.log("songObject in filterSongs", songObject);
 		//loop through the object songs that I already have from firebase
 		for (key in songObject.songs) {
 			//matching the artist key or the album key
 			if (currentArtist === songObject.songs[key].artist || currentAlbum === songObject.songs[key].album) {
 
-				console.log("currentArtist", currentArtist);
+				// console.log("currentArtist", currentArtist);
 				//assigned the matching keys into my new songs object defined above.
 				filteredSongObject.songs[key] = songObject.songs[key];
 
-				console.log("filteredSongObject", filteredSongObject.songs);
+				// console.log("filteredSongObject", filteredSongObject.songs);
 				//call my toDomData function with my new songs object to populate the dom.			
 				toDom.toDomData(filteredSongObject);
 			}		
@@ -35,13 +35,13 @@ define(["jquery", "populate-songs", "to-dom"], function($, populate, toDom){
 	//filter button
 	$("#filter-button").click(function (e){
 		event.preventDefault();
-		console.log("button works");
+		// console.log("button works");
 		
 		//getting the value from the dropdown artist option.
 		currentArtist = $("#artist-dropdown").val();
-		console.log("currentArtist", currentArtist);
+		// console.log("currentArtist", currentArtist);
 		currentAlbum = $("#album-dropdown").val();
-		console.log("currentAlbum", currentAlbum);
+		// console.log("currentAlbum", currentAlbum);
 		filterSongs(songObject);
 		
 		//calling the songData function and passing a new function with the matching new object.
@@ -59,13 +59,13 @@ define(["jquery", "populate-songs", "to-dom"], function($, populate, toDom){
 		//call the original function.
 		toDom.toDomData(songObject);
       	
-      	console.log("unfilteredSongObject", filteredSongObject);
+      	// console.log("unfilteredSongObject", filteredSongObject);
     });
 
 	return {
 		forMyFilter: function (songData) {
 		songObject = songData;
-		console.log("for checking link to populate songs");
+		// console.log("for checking link to populate songs");
 		
 		}
 

@@ -1,5 +1,5 @@
 <div>
 	{{#each songs}}
-		<div>"{{title}}"-by-{{artist}}-{{album}} <button class='delete-button' id="{{{@key}}}">Delete</button></div>
+		<div>"{{title}}"-by-{{artist}}-{{album}} <button type="button" class='delete-button' id="{{{@key}}}" data-toggle="modal" data-target="#myDeleteModal">Delete</button></div>
 	{{/each}}
 </div>

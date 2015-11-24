@@ -1,49 +1,42 @@
-define(["jquery", "populate-songs", "to-dom"],function($, populate, toDom){
+define(["jquery", "populate-songs", "to-dom", "q"],function($, populate, toDom, Q){
 
 	
-	var songElement = $("#listOfSongs");
-
-	//ids for my delete from dom button.
-	var deleteAllButton = $("#delete-all-button");
 	 
-	var currentRemoved;
+	// var currentRemoved;
 	//made a newObject with correstponding keys from the array.
-	var currentRemovedObject = {
-	 	songs: {
+	// var currentRemovedObject = {
+	//  	songs: {
 
-	 	}
-	 };
+	//  	}
+	//  };
 
-	//Delete all button 
-	$(deleteAllButton).click(function(){
-		console.log("buttons all button works");
-		songElement.html("");
-	});
-	
+	var deferred = Q.defer();
 
+	 return {
 
-
-	//Deleting specific song
-	$(document).on("click", ".delete-button", function(event) {
-		var songKey = $(this).attr("id");
-
-		console.log("https://blinding-torch-9569.firebaseio.com/songs/" + songKey + "/.json");
-		// return;
-
-		$.ajax({
-			url: "https://blinding-torch-9569.firebaseio.com/songs/" + songKey + "/.json",
-			method: "DELETE"
-		}).done(function(){
-			
-			console.log("song deleted");
-		})
+	 	deleteSong: function(songKey) {
+	 		console.log("deleteSong promise linked");
 
 
-	});
-	
+			$.ajax({
+				url: "https://blinding-torch-9569.firebaseio.com/songs/" + songKey + "/.json",
+				method: "DELETE"
+			}).done(function(){
+				console.log("https://blinding-torch-9569.firebaseio.com/songs/" + songKey + "/.json");
 
-	//split the array into two to get the "baby one more time key" and compare this value to the key in the 
-	//object from the json file inside firebase. 
+				deferred.resolve(songKey);
+
+			}).fail(function(xhr, status, error){
+
+				deferred.reject(error);
+			});
+
+		return deferred.promise;
+		}
+
+	}
+
+
 
 
 });

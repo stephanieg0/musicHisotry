@@ -3,12 +3,12 @@ define(["jquery", "hbs"], function($, hbs){
 	return {
 		//function to send songs to dom
 		toDomData: function (songData) {
-			console.log("songData from toDom", songData);
+			// console.log("songData from toDom", songData);
 			//replaced my loop for a require hbs dependency and function to append to dom.
 			//hbs has an #each tag that makes a loop.
 			require(["hbs!../templates/songs"], function (songTemplate) {
 			    $("#listOfSongs").html(songTemplate(songData));
-			    console.log("songTemplate(songData)", songTemplate(songData));
+			    // console.log("songTemplate(songData)", songTemplate(songData));
 
 			  });
 
