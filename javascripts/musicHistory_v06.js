@@ -1,5 +1,5 @@
- define(["jquery"], 
-  function($) {
+ define(["jquery", "populate-songs", "to-dom"], 
+  function($, populate, Dom) {
 
 	// All the JavaScript that depends on jQuery will be written here
 	 // var songs = [];
