@@ -1,8 +1,9 @@
 define(["jquery"], function($){
+	
 	return {
 
 		toDomData: function (songData) {
-			console.log("toDomObject");
+			console.log("toDomObject", songData);
 			console.log("this is my song data going to the dom");
 			for (var i = 0; i < songs.length; i++){
 				var newSongs = songs[i];
