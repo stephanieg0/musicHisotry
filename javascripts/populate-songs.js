@@ -1,6 +1,6 @@
 //populate songs file is only going to return the first json file of songs.
 //dependency is the json file.
-define(["jquery"], function($){
+define(["jquery", "to-dom"], function($, dom){
 
 	//I will be reutning the object only.
 	return {
@@ -10,9 +10,7 @@ define(["jquery"], function($){
 			//use the ajax method to import the json file inside the function that
 			//will be called in the entry.js file.
 			//function's parameter is the function that will populate the dom.
-			$.ajax({url: "data/songs.json"}).done(function(callBackFunction){
-
-			});
+			$.ajax({url: "data/songs.json"}).done(callBackFunction);
 		}
 	}
 
