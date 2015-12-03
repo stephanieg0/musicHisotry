@@ -14,7 +14,8 @@
 
 	</head>
 
-	<body>		
+	<body ng-app="musicHistApp">
+		<section  ng-controller="musicHistCtrl">		
 		
 			<!--Top Box-->
 				<nav class = "topBox">
@@ -103,15 +104,20 @@
 				<div class="rightBox col-md-6 col-md-offset-1">
 					<button id="more-button" class="btn btn-default">More...</button>
 					<p class ="your-songs">Your Songs</p>
-					<div id="listOfSongs"></div>
+					<div ng-bind-html="listOfSongs" ng-model="songs">
+						
+					</div>
 					<div id="morelistOfSongs"></div>
 					<button id="delete-all-button" class="btn btn-default">Delete All</button>				
 				</div>
 				<div class="col-md-1"></div>
 			</div>
 		</div>
-		<!--data-main has to be the musicHistory file, which is the file that loads first-->	
-		<script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script>
+		</section>
+	
+		<script src="lib/bower_components/angular/angular.min.js"></script>	
+		<script src="app/musicHistAngular.js"></script>
+		<!--<script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script>-->
 		
 	</body>
 
