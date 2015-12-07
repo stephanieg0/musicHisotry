@@ -89,8 +89,8 @@ body {
 #listOfSongs {
   min-height: 286px; }
 
-.input-box-hidden {
-  display: none; }
+/*.input-box-hidden {
+  display: none; }*/
 
 #input-box-display {
   text-align: center;

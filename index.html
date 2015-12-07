@@ -14,111 +14,46 @@
 
 	</head>
 
-	<body ng-app="musicHistApp">
-		<section  ng-controller="musicHistCtrl">		
+	<body ng-app="app">
+		<section  ng-controller="songControl">		
 		
 			<!--Top Box-->
-				<nav class = "topBox">
-					<a href="#" id="viewLink" class="nav-text">View Music</a>
-					<label>|</label>
-					<a href="#" id="addLink" class="nav-text">Add Music</a>
-					<label> | </label>
-					<a id="profileLink" class="nav-text">Profile</a>
-				</nav>
-	
+			<nav class = "topBox">
+				<a href="/#/songs/list" id="viewLink" class="nav-text">View Music</a>
+				<label>|</label>
+				<a href="/#/songs/add" id="addLink" class="nav-text">Add Music</a>
+				<label> | </label>
+				<a id="profileLink" class="nav-text">Profile</a>
+			</nav>
 			<!--HIDDEN NAV FOR POSITION-->
-					<nav class = "topBoxHidden">
-						<a class="nav-text">View Music</a>
-						<label>|</label>
-						<a class="nav-text">Add Music</a>
-						<label> | </label>
-						<a class="nav-text">Profile</a>
-					</nav>
-	
+			<nav class = "topBoxHidden">
+				<a class="nav-text">View Music</a>
+				<label>|</label>
+				<a class="nav-text">Add Music</a>
+				<label> | </label>
+				<a class="nav-text">Profile</a>
+			</nav>
+
+		<!--bootstrap container-->
 		<div class="container-fluid">
-			<!--second row that contains both boxes-->
-			<div class="row">
+			<!--bootstrap row-->
+			<div class="row" ng-view>
 
-				<div class="col-md-12">
-					<!--Left Box-->
-					<!--Input Boxes-->
-					<form class="input-box-hidden" id="input-box-display">
-						<div class="form-group">
-							<input type="text" id="input-artist-name" class="form-control" placeholder="Artist Name"> 
-						</div>
-						<div class="form-group">
-							<input type="text" id="input-song-name" class="form-control" placeholder="Song Name">
-						</div>
-						<div class="form-group">
-							<input type="text" id="input-album-name" class="form-control" placeholder="Album Name">
-						</div>
-						<button class="btn btn-default" id="add-button">Add to List</button>
-					</form>
-				</div>
+			<!--partials-->
 
-				<div class="col-md-1"></div>
-
-					<!--Left Box-->
-				<div class="leftBox col-md-3">
-					<fieldset>
-						<label>Song length:</label>
-						<input type = "range">
-					</fieldset>
-					<fieldset>
-						<p><label>Artist</label></p>
-						<select class="form-control">
-							<p><option value ="Avril Lavigne">Avril Lavigne</option></p>
-						</select>
-					</fieldset>
-					<fieldset>
-						<p><label>Album</label></p>
-						<select class="form-control">
-							<p><option value ="Let Me Go">Let Me Go</option></p>
-						</select>
-					</fieldset>
-					<!--Genre Left Options-->
-					<fieldset>	
-						<p><label>Genre:</label></p>
-						<div class = "musicGenreL">
-							<p><input type = "radio"> Rock</p>
-							<p><input type = "radio"> Pop</p>
-							<p><input type = "radio"> Blues</p>
-						</div>
-				
-					<!--Genre Right Options-->
-
-					<div class = "musicGenreR">	
-						<p><input type = "radio"> Classical</p>
-						<p><input type = "radio"> Jazz</p>
-						<p><input type = "radio"> HipHop</p> 	
-					</div>
-					</fieldset>
-					<!--Filter Button-->
-					<div id="filter-button">
-					<input type="submit" class="btn btn-default" value="Filter">	
-					</div>				    
-				
-				</div>
-
-				<!--Right Box-->
-				<div class="rightBox col-md-6 col-md-offset-1">
-					<button id="more-button" class="btn btn-default">More...</button>
-					<p class ="your-songs">Your Songs</p>
-					<div ng-bind-html="listOfSongs" ng-model="songs">
-						
-					</div>
-					<div id="morelistOfSongs"></div>
-					<button id="delete-all-button" class="btn btn-default">Delete All</button>				
-				</div>
-				<div class="col-md-1"></div>
 			</div>
 		</div>
 		</section>
 	
-		<script src="lib/bower_components/angular/angular.min.js"></script>	
-		<script src="app/musicHistAngular.js"></script>
-		<!--<script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script>-->
-		
+		<script src="lib/bower_components/angular/angular.min.js"></script>
+		<script src="lib/bower_components/angular-route/angular-route.min.js"></script>
+		<script src="lib/bower_components/firebase/firebase.js"></script>
+		<script src="lib/bower_components/angularfire/dist/angularfire.min.js"></script>	
+
+		<script src="app/app.js"></script><!--change to app and only leave dnRouter-->
+		<script src="app/factories/songStorage.js"></script>
+		<script src="app/controllers/songControl.js"></script>
+
 	</body>
 
 </html>

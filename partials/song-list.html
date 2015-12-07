@@ -1,0 +1,64 @@
+<!--extra empty column for alignment-->
+<div class="col-md-1"></div>
+
+<!--Left Box-->
+<div class="leftBox col-md-3">
+  <fieldset>
+    <label>Song length:</label>
+    <input type = "range">
+  </fieldset>
+  <fieldset>
+    <p><label>Artist</label></p>
+    <select class="form-control">
+      <p><option value ="artist" ng-repeat="songArtist in songs">{{songArtist.artist}}</option></p>
+    </select>
+  </fieldset>
+  <fieldset>
+    <p><label>Album</label></p>
+    <select class="form-control">
+      <p><option value ="album" ng-repeat="songAlbum in songs">{{songAlbum.album}}</option></p>
+    </select>
+  </fieldset>
+  <!--Genre Left Options-->
+  <fieldset>  
+    <p><label>Genre:</label></p>
+    <div class = "musicGenreL">
+      <p><input type = "radio"> Rock</p>
+      <p><input type = "radio"> Pop</p>
+      <p><input type = "radio"> Blues</p>
+    </div>
+
+  <!--Genre Right Options-->
+
+  <div class = "musicGenreR"> 
+    <p><input type = "radio"> Classical</p>
+    <p><input type = "radio"> Jazz</p>
+    <p><input type = "radio"> HipHop</p>  
+  </div>
+  </fieldset>
+  <!--Filter Button-->
+  <div id="filter-button">
+  <button class="btn btn-default" value="Filter" ng-click="filterSong(songArtist, songAlbum)">Filter</button> 
+  </div>            
+</div><!--end of leftBox-->
+
+<!--Right Box-->
+<div class="rightBox col-md-6 col-md-offset-1">
+  <button id="more-button" class="btn btn-default">More...</button>
+
+  <p class ="your-songs">Your Songs</p>
+  <!--List of songs from firebase-->
+  <div class="listOfSongs" ng-repeat="singleSong in songs" ng-model="songs">
+    <ul>
+     <li>{{singleSong.title}} -
+     {{singleSong.artist}} -
+     {{singleSong.album}}<button class="delete-button" ng-click="deleteSong(singleSong)">Delete</button>
+     </li>
+    </ul> 
+  </div>
+
+  <button id="delete-all-button" class="btn btn-default" ng-click="hideAll(songs)">Remove All</button>        
+</div><!--end of RightBox-->
+
+<!--extra empty column for alignment-->
+<div class="col-md-1"></div>
